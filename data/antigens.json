@@ -1,0 +1,23 @@
+{
+  "antigens": [
+    {"id": "bcg",       "name": "Tuberculosis (BCG)",             "shortName": "BCG",   "group": "core"},
+    {"id": "hepb",      "name": "Hepatitis B",                    "shortName": "HepB",  "group": "core"},
+    {"id": "dtx",       "name": "Diphtheria",                     "shortName": "D",     "group": "core"},
+    {"id": "ttx",       "name": "Tetanus",                        "shortName": "T",     "group": "core"},
+    {"id": "ptx",       "name": "Pertussis (whooping cough)",     "shortName": "aP",    "group": "core"},
+    {"id": "ipv",       "name": "Polio (inactivated)",            "shortName": "IPV",   "group": "core"},
+    {"id": "hib",       "name": "Haemophilus influenzae type b",  "shortName": "Hib",   "group": "core"},
+    {"id": "pcv",       "name": "Pneumococcal",                   "shortName": "PCV",   "group": "core"},
+    {"id": "rotavirus", "name": "Rotavirus",                      "shortName": "Rota",  "group": "core"},
+    {"id": "mmr_m",     "name": "Measles",                        "shortName": "M",     "group": "core"},
+    {"id": "mmr_mu",    "name": "Mumps",                          "shortName": "Mu",    "group": "core"},
+    {"id": "mmr_r",     "name": "Rubella",                        "shortName": "R",     "group": "core"},
+    {"id": "vzv",       "name": "Varicella (chickenpox)",         "shortName": "Var",   "group": "core"},
+    {"id": "men_c",     "name": "Meningococcal C",                "shortName": "MenC",  "group": "core"},
+    {"id": "men_b",     "name": "Meningococcal B",                "shortName": "MenB",  "group": "recommended"},
+    {"id": "hepa",      "name": "Hepatitis A",                    "shortName": "HepA",  "group": "core"},
+    {"id": "jev",       "name": "Japanese Encephalitis",          "shortName": "JEV",   "group": "core"},
+    {"id": "hpv",       "name": "Human Papillomavirus",           "shortName": "HPV",   "group": "core"},
+    {"id": "influenza", "name": "Influenza (seasonal)",           "shortName": "Flu",   "group": "recommended"}
+  ]
+}

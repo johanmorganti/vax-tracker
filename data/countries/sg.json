@@ -1,0 +1,155 @@
+{
+  "countryCode": "sg",
+  "countryName": "Singapore",
+  "flag": "🇸🇬",
+  "programName": "National Childhood Immunisation Programme (NCIP)",
+  "lastReviewed": "2024-01",
+  "sourceUrl": "https://www.healthhub.sg/programmes/national-childhood-immunisation-programme",
+  "notes": "Singapore's NCIP is managed by the Ministry of Health. Under the Infectious Diseases Act, only Diphtheria and Measles are legally compulsory. All other NCIP vaccines are strongly recommended and subsidised. This schedule marks all NCIP vaccines as 'mandatory' and extras as 'recommended'.",
+  "doses": [
+    {
+      "id": "sg-bcg",
+      "ageMonths": 0, "ageLabel": "Birth",
+      "products": ["bcg-vaccine"],
+      "antigens": ["bcg"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "sg-bcg", "status": "mandatory", "notes": "Given within 1 month of birth"
+    },
+    {
+      "id": "sg-hepb-1",
+      "ageMonths": 0, "ageLabel": "Birth",
+      "products": ["engerix-b"],
+      "antigens": ["hepb"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "sg-hepb", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "sg-hepb-2",
+      "ageMonths": 1, "ageLabel": "1 month",
+      "products": ["engerix-b"],
+      "antigens": ["hepb"],
+      "doseNumber": 2, "doseType": "primary",
+      "seriesId": "sg-hepb", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "sg-5in1-1",
+      "ageMonths": 3, "ageLabel": "3 months",
+      "products": ["pediacel", "pentaxim"],
+      "antigens": ["dtx", "ttx", "ptx", "ipv", "hib"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "sg-5in1", "status": "mandatory", "notes": "5-in-1 (DTaP-IPV-Hib)"
+    },
+    {
+      "id": "sg-pcv-1",
+      "ageMonths": 3, "ageLabel": "3 months",
+      "products": ["prevenar-13"],
+      "antigens": ["pcv"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "sg-pcv", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "sg-rotavirus-1",
+      "ageMonths": 3, "ageLabel": "3 months",
+      "products": ["rotarix"],
+      "antigens": ["rotavirus"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "sg-rotavirus", "status": "mandatory", "notes": "Oral vaccine"
+    },
+    {
+      "id": "sg-5in1-2",
+      "ageMonths": 4, "ageLabel": "4 months",
+      "products": ["pediacel", "pentaxim"],
+      "antigens": ["dtx", "ttx", "ptx", "ipv", "hib"],
+      "doseNumber": 2, "doseType": "primary",
+      "seriesId": "sg-5in1", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "sg-pcv-2",
+      "ageMonths": 4, "ageLabel": "4 months",
+      "products": ["prevenar-13"],
+      "antigens": ["pcv"],
+      "doseNumber": 2, "doseType": "primary",
+      "seriesId": "sg-pcv", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "sg-rotavirus-2",
+      "ageMonths": 4, "ageLabel": "4 months",
+      "products": ["rotarix"],
+      "antigens": ["rotavirus"],
+      "doseNumber": 2, "doseType": "primary",
+      "seriesId": "sg-rotavirus", "status": "mandatory", "notes": "Final dose for Rotarix 2-dose schedule"
+    },
+    {
+      "id": "sg-5in1-3",
+      "ageMonths": 5, "ageLabel": "5 months",
+      "products": ["pediacel", "pentaxim"],
+      "antigens": ["dtx", "ttx", "ptx", "ipv", "hib"],
+      "doseNumber": 3, "doseType": "primary",
+      "seriesId": "sg-5in1", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "sg-hepb-3",
+      "ageMonths": 6, "ageLabel": "6 months",
+      "products": ["engerix-b"],
+      "antigens": ["hepb"],
+      "doseNumber": 3, "doseType": "primary",
+      "seriesId": "sg-hepb", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "sg-pcv-3",
+      "ageMonths": 6, "ageLabel": "6 months",
+      "products": ["prevenar-13"],
+      "antigens": ["pcv"],
+      "doseNumber": 3, "doseType": "primary",
+      "seriesId": "sg-pcv", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "sg-mmr-1",
+      "ageMonths": 12, "ageLabel": "12 months",
+      "products": ["priorix", "mmr-ii"],
+      "antigens": ["mmr_m", "mmr_mu", "mmr_r"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "sg-mmr", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "sg-vzv-1",
+      "ageMonths": 12, "ageLabel": "12 months",
+      "products": ["varilrix", "varivax"],
+      "antigens": ["vzv"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "sg-vzv", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "sg-pcv-booster",
+      "ageMonths": 15, "ageLabel": "15 months",
+      "products": ["prevenar-13"],
+      "antigens": ["pcv"],
+      "doseNumber": 4, "doseType": "booster",
+      "seriesId": "sg-pcv", "status": "mandatory", "notes": "Booster dose"
+    },
+    {
+      "id": "sg-5in1-booster",
+      "ageMonths": 18, "ageLabel": "18 months",
+      "products": ["pediacel", "pentaxim"],
+      "antigens": ["dtx", "ttx", "ptx", "ipv", "hib"],
+      "doseNumber": 4, "doseType": "booster",
+      "seriesId": "sg-5in1", "status": "mandatory", "notes": "18-month booster"
+    },
+    {
+      "id": "sg-mmr-2",
+      "ageMonths": 18, "ageLabel": "18 months",
+      "products": ["priorix", "mmr-ii"],
+      "antigens": ["mmr_m", "mmr_mu", "mmr_r"],
+      "doseNumber": 2, "doseType": "booster",
+      "seriesId": "sg-mmr", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "sg-hpv-1",
+      "ageMonths": 132, "ageLabel": "11 years",
+      "products": ["gardasil-9"],
+      "antigens": ["hpv"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "sg-hpv", "status": "mandatory", "notes": "School-based HPV vaccination programme"
+    }
+  ]
+}

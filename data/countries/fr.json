@@ -1,0 +1,165 @@
+{
+  "countryCode": "fr",
+  "countryName": "France",
+  "flag": "🇫🇷",
+  "programName": "Calendrier vaccinal français",
+  "lastReviewed": "2024-01",
+  "sourceUrl": "https://www.has-sante.fr/jcms/c_2905344/fr/calendrier-des-vaccinations-et-recommandations-vaccinales",
+  "notes": "France made 11 vaccines mandatory in 2018 (previously only 3). Varicella added to mandatory schedule in 2024.",
+  "doses": [
+    {
+      "id": "fr-hexavalent-1",
+      "ageMonths": 2, "ageLabel": "2 months",
+      "products": ["infanrix-hexa", "hexyon"],
+      "antigens": ["dtx", "ttx", "ptx", "ipv", "hib", "hepb"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "fr-hexavalent", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "fr-pcv-1",
+      "ageMonths": 2, "ageLabel": "2 months",
+      "products": ["prevenar-13"],
+      "antigens": ["pcv"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "fr-pcv", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "fr-menb-1",
+      "ageMonths": 2, "ageLabel": "2 months",
+      "products": ["bexsero"],
+      "antigens": ["men_b"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "fr-menb", "status": "recommended", "notes": "Recommended since 2022"
+    },
+    {
+      "id": "fr-rotavirus-1",
+      "ageMonths": 2, "ageLabel": "2 months",
+      "products": ["rotarix"],
+      "antigens": ["rotavirus"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "fr-rotavirus", "status": "recommended", "notes": "Oral vaccine"
+    },
+    {
+      "id": "fr-hexavalent-2",
+      "ageMonths": 4, "ageLabel": "4 months",
+      "products": ["infanrix-hexa", "hexyon"],
+      "antigens": ["dtx", "ttx", "ptx", "ipv", "hib", "hepb"],
+      "doseNumber": 2, "doseType": "primary",
+      "seriesId": "fr-hexavalent", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "fr-pcv-2",
+      "ageMonths": 4, "ageLabel": "4 months",
+      "products": ["prevenar-13"],
+      "antigens": ["pcv"],
+      "doseNumber": 2, "doseType": "primary",
+      "seriesId": "fr-pcv", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "fr-menb-2",
+      "ageMonths": 4, "ageLabel": "4 months",
+      "products": ["bexsero"],
+      "antigens": ["men_b"],
+      "doseNumber": 2, "doseType": "primary",
+      "seriesId": "fr-menb", "status": "recommended", "notes": null
+    },
+    {
+      "id": "fr-rotavirus-2",
+      "ageMonths": 3, "ageLabel": "3 months",
+      "products": ["rotarix"],
+      "antigens": ["rotavirus"],
+      "doseNumber": 2, "doseType": "primary",
+      "seriesId": "fr-rotavirus", "status": "recommended",
+      "notes": "Oral vaccine — must be completed before 24 weeks of age"
+    },
+    {
+      "id": "fr-menc-1",
+      "ageMonths": 5, "ageLabel": "5 months",
+      "products": ["nimenrix", "neisvac-c"],
+      "antigens": ["men_c"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "fr-menc", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "fr-hexavalent-3",
+      "ageMonths": 11, "ageLabel": "11 months",
+      "products": ["infanrix-hexa", "hexyon"],
+      "antigens": ["dtx", "ttx", "ptx", "ipv", "hib", "hepb"],
+      "doseNumber": 3, "doseType": "primary",
+      "seriesId": "fr-hexavalent", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "fr-pcv-3",
+      "ageMonths": 11, "ageLabel": "11 months",
+      "products": ["prevenar-13"],
+      "antigens": ["pcv"],
+      "doseNumber": 3, "doseType": "primary",
+      "seriesId": "fr-pcv", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "fr-menc-2",
+      "ageMonths": 11, "ageLabel": "11 months",
+      "products": ["nimenrix", "neisvac-c"],
+      "antigens": ["men_c"],
+      "doseNumber": 2, "doseType": "primary",
+      "seriesId": "fr-menc", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "fr-menb-3",
+      "ageMonths": 11, "ageLabel": "11 months",
+      "products": ["bexsero"],
+      "antigens": ["men_b"],
+      "doseNumber": 3, "doseType": "primary",
+      "seriesId": "fr-menb", "status": "recommended", "notes": null
+    },
+    {
+      "id": "fr-mmr-1",
+      "ageMonths": 12, "ageLabel": "12 months",
+      "products": ["priorix", "mmr-ii"],
+      "antigens": ["mmr_m", "mmr_mu", "mmr_r"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "fr-mmr", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "fr-vzv-1",
+      "ageMonths": 12, "ageLabel": "12 months",
+      "products": ["varilrix", "varivax"],
+      "antigens": ["vzv"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "fr-vzv", "status": "mandatory", "notes": "Mandatory since January 2024"
+    },
+    {
+      "id": "fr-mmr-2",
+      "ageMonths": 18, "ageLabel": "16–18 months",
+      "products": ["priorix", "mmr-ii"],
+      "antigens": ["mmr_m", "mmr_mu", "mmr_r"],
+      "doseNumber": 2, "doseType": "booster",
+      "seriesId": "fr-mmr", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "fr-vzv-2",
+      "ageMonths": 18, "ageLabel": "16–18 months",
+      "products": ["varilrix", "varivax"],
+      "antigens": ["vzv"],
+      "doseNumber": 2, "doseType": "booster",
+      "seriesId": "fr-vzv", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "fr-dtap-ipv-booster",
+      "ageMonths": 72, "ageLabel": "6 years",
+      "products": ["boostrix-tetra", "repevax"],
+      "antigens": ["dtx", "ttx", "ptx", "ipv"],
+      "doseNumber": 4, "doseType": "booster",
+      "seriesId": "fr-dtap-ipv", "status": "mandatory", "notes": "School entry booster"
+    },
+    {
+      "id": "fr-hpv-1",
+      "ageMonths": 132, "ageLabel": "11 years",
+      "products": ["gardasil-9"],
+      "antigens": ["hpv"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "fr-hpv", "status": "mandatory",
+      "notes": "Recommended for all children aged 11–14 (2-dose schedule)"
+    }
+  ]
+}

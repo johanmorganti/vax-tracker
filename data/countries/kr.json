@@ -1,0 +1,213 @@
+{
+  "countryCode": "kr",
+  "countryName": "South Korea",
+  "flag": "🇰🇷",
+  "programName": "National Immunization Program (NIP)",
+  "lastReviewed": "2024-01",
+  "sourceUrl": "https://nip.kdca.go.kr",
+  "notes": "Korea's NIP is managed by the Korea Disease Control and Prevention Agency (KDCA). Japanese Encephalitis vaccine is a key addition vs Western schedules. DTaP and IPV are typically given as a pentavalent combination (DTaP-IPV-Hib).",
+  "doses": [
+    {
+      "id": "kr-bcg",
+      "ageMonths": 0, "ageLabel": "Birth",
+      "products": ["bcg-vaccine"],
+      "antigens": ["bcg"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "kr-bcg", "status": "mandatory", "notes": "Given within 4 weeks of birth"
+    },
+    {
+      "id": "kr-hepb-1",
+      "ageMonths": 0, "ageLabel": "Birth",
+      "products": ["engerix-b"],
+      "antigens": ["hepb"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "kr-hepb", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "kr-hepb-2",
+      "ageMonths": 1, "ageLabel": "1 month",
+      "products": ["engerix-b"],
+      "antigens": ["hepb"],
+      "doseNumber": 2, "doseType": "primary",
+      "seriesId": "kr-hepb", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "kr-dtap-ipv-hib-1",
+      "ageMonths": 2, "ageLabel": "2 months",
+      "products": ["pentaxim", "pediacel"],
+      "antigens": ["dtx", "ttx", "ptx", "ipv", "hib"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "kr-dtap-ipv-hib", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "kr-pcv-1",
+      "ageMonths": 2, "ageLabel": "2 months",
+      "products": ["prevenar-13"],
+      "antigens": ["pcv"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "kr-pcv", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "kr-rotavirus-1",
+      "ageMonths": 2, "ageLabel": "2 months",
+      "products": ["rotarix"],
+      "antigens": ["rotavirus"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "kr-rotavirus", "status": "mandatory",
+      "notes": "Oral vaccine. 2-dose schedule (Rotarix) or 3-dose (RotaTeq)"
+    },
+    {
+      "id": "kr-dtap-ipv-hib-2",
+      "ageMonths": 4, "ageLabel": "4 months",
+      "products": ["pentaxim", "pediacel"],
+      "antigens": ["dtx", "ttx", "ptx", "ipv", "hib"],
+      "doseNumber": 2, "doseType": "primary",
+      "seriesId": "kr-dtap-ipv-hib", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "kr-pcv-2",
+      "ageMonths": 4, "ageLabel": "4 months",
+      "products": ["prevenar-13"],
+      "antigens": ["pcv"],
+      "doseNumber": 2, "doseType": "primary",
+      "seriesId": "kr-pcv", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "kr-rotavirus-2",
+      "ageMonths": 4, "ageLabel": "4 months",
+      "products": ["rotarix"],
+      "antigens": ["rotavirus"],
+      "doseNumber": 2, "doseType": "primary",
+      "seriesId": "kr-rotavirus", "status": "mandatory", "notes": "Final dose for 2-dose Rotarix schedule"
+    },
+    {
+      "id": "kr-dtap-ipv-hib-3",
+      "ageMonths": 6, "ageLabel": "6 months",
+      "products": ["pentaxim", "pediacel"],
+      "antigens": ["dtx", "ttx", "ptx", "ipv", "hib"],
+      "doseNumber": 3, "doseType": "primary",
+      "seriesId": "kr-dtap-ipv-hib", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "kr-pcv-3",
+      "ageMonths": 6, "ageLabel": "6 months",
+      "products": ["prevenar-13"],
+      "antigens": ["pcv"],
+      "doseNumber": 3, "doseType": "primary",
+      "seriesId": "kr-pcv", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "kr-hepb-3",
+      "ageMonths": 6, "ageLabel": "6 months",
+      "products": ["engerix-b"],
+      "antigens": ["hepb"],
+      "doseNumber": 3, "doseType": "primary",
+      "seriesId": "kr-hepb", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "kr-mmr-1",
+      "ageMonths": 12, "ageLabel": "12–15 months",
+      "products": ["priorix", "mmr-ii"],
+      "antigens": ["mmr_m", "mmr_mu", "mmr_r"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "kr-mmr", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "kr-vzv-1",
+      "ageMonths": 12, "ageLabel": "12–15 months",
+      "products": ["varilrix", "varivax"],
+      "antigens": ["vzv"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "kr-vzv", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "kr-jev-1",
+      "ageMonths": 12, "ageLabel": "12 months",
+      "products": ["encevac"],
+      "antigens": ["jev"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "kr-jev", "status": "mandatory",
+      "notes": "Inactivated JEV. Primary series: 3 doses"
+    },
+    {
+      "id": "kr-hepa-1",
+      "ageMonths": 12, "ageLabel": "12–23 months",
+      "products": ["havrix-junior"],
+      "antigens": ["hepa"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "kr-hepa", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "kr-jev-2",
+      "ageMonths": 13, "ageLabel": "13 months",
+      "products": ["encevac"],
+      "antigens": ["jev"],
+      "doseNumber": 2, "doseType": "primary",
+      "seriesId": "kr-jev", "status": "mandatory", "notes": "At least 4 weeks after dose 1"
+    },
+    {
+      "id": "kr-dtap-ipv-hib-4",
+      "ageMonths": 15, "ageLabel": "15–18 months",
+      "products": ["pentaxim", "pediacel"],
+      "antigens": ["dtx", "ttx", "ptx", "ipv", "hib"],
+      "doseNumber": 4, "doseType": "booster",
+      "seriesId": "kr-dtap-ipv-hib", "status": "mandatory", "notes": "Toddler booster"
+    },
+    {
+      "id": "kr-pcv-4",
+      "ageMonths": 15, "ageLabel": "15–18 months",
+      "products": ["prevenar-13"],
+      "antigens": ["pcv"],
+      "doseNumber": 4, "doseType": "booster",
+      "seriesId": "kr-pcv", "status": "mandatory", "notes": "Toddler booster"
+    },
+    {
+      "id": "kr-hepa-2",
+      "ageMonths": 18, "ageLabel": "18–23 months",
+      "products": ["havrix-junior"],
+      "antigens": ["hepa"],
+      "doseNumber": 2, "doseType": "primary",
+      "seriesId": "kr-hepa", "status": "mandatory", "notes": "At least 6 months after dose 1"
+    },
+    {
+      "id": "kr-jev-3",
+      "ageMonths": 24, "ageLabel": "24–35 months",
+      "products": ["encevac"],
+      "antigens": ["jev"],
+      "doseNumber": 3, "doseType": "primary",
+      "seriesId": "kr-jev", "status": "mandatory", "notes": "Completes 3-dose primary series; 12 months after dose 2"
+    },
+    {
+      "id": "kr-dtap-ipv-5",
+      "ageMonths": 60, "ageLabel": "4–6 years",
+      "products": ["pentaxim", "boostrix-tetra", "repevax"],
+      "antigens": ["dtx", "ttx", "ptx", "ipv"],
+      "doseNumber": 5, "doseType": "booster",
+      "seriesId": "kr-dtap-ipv", "status": "mandatory", "notes": "School-entry booster — Hib not needed at this age"
+    },
+    {
+      "id": "kr-mmr-2",
+      "ageMonths": 60, "ageLabel": "4–6 years",
+      "products": ["priorix", "mmr-ii"],
+      "antigens": ["mmr_m", "mmr_mu", "mmr_r"],
+      "doseNumber": 2, "doseType": "booster",
+      "seriesId": "kr-mmr", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "kr-jev-4",
+      "ageMonths": 72, "ageLabel": "6 years",
+      "products": ["encevac"],
+      "antigens": ["jev"],
+      "doseNumber": 4, "doseType": "booster",
+      "seriesId": "kr-jev", "status": "mandatory", "notes": "School-entry booster"
+    },
+    {
+      "id": "kr-hpv-1",
+      "ageMonths": 132, "ageLabel": "11–12 years",
+      "products": ["gardasil-9"],
+      "antigens": ["hpv"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "kr-hpv", "status": "mandatory", "notes": "2-dose schedule for ages 11–13"
+    }
+  ]
+}

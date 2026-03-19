@@ -1,0 +1,235 @@
+{% extends "base.html" %}
+{% block title %}VaxTracker — Relocation Vaccine Comparison{% endblock %}
+
+{% block content %}
+<div class="mb-6">
+  <h1 class="text-2xl font-bold text-gray-900 mb-1">Relocation Vaccine Check</h1>
+  <p class="text-sm text-gray-500">
+    Select the country your child was vaccinated in, the country you're moving to,
+    and your child's current age. We'll show you what's already covered and what may still be needed.
+  </p>
+</div>
+
+<!-- Form -->
+<form method="POST" action="/compare"
+      class="bg-white border border-gray-200 rounded-xl p-6 mb-8 flex flex-wrap gap-4 items-end">
+  <div class="flex-1 min-w-[140px]">
+    <label class="block text-xs font-medium text-gray-600 mb-1">Vaccinated in</label>
+    <select name="from_country"
+            class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-400 focus:outline-none">
+      <option value="">Select country…</option>
+      {% for country in countries %}
+      <option value="{{ country.code }}" {{ 'selected' if form.from == country.code }}>
+        {{ country.flag }} {{ country.name }}
+      </option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div class="flex-1 min-w-[140px]">
+    <label class="block text-xs font-medium text-gray-600 mb-1">Moving to</label>
+    <select name="to_country"
+            class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-400 focus:outline-none">
+      <option value="">Select country…</option>
+      {% for country in countries %}
+      <option value="{{ country.code }}" {{ 'selected' if form.to == country.code }}>
+        {{ country.flag }} {{ country.name }}
+      </option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div class="w-36">
+    <label class="block text-xs font-medium text-gray-600 mb-1">Child's age (months)</label>
+    <input type="number" name="child_age" min="0" max="216"
+           value="{{ form.age }}"
+           placeholder="e.g. 18"
+           class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-400 focus:outline-none" />
+  </div>
+
+  <button type="submit"
+          class="bg-indigo-600 text-white text-sm font-medium px-5 py-2 rounded-lg hover:bg-indigo-700 transition">
+    Check coverage
+  </button>
+</form>
+
+<!-- Results -->
+{% if result %}
+{% set sa = result.schedule_a %}
+{% set sb = result.schedule_b %}
+{% set age = result.child_age_months %}
+
+<div class="mb-4 flex items-center gap-3 flex-wrap">
+  <span class="text-lg">{{ sa.flag }} {{ sa.countryName }}</span>
+  <span class="text-gray-400">→</span>
+  <span class="text-lg">{{ sb.flag }} {{ sb.countryName }}</span>
+  <span class="text-gray-400 text-sm">· child age: {{ age }} month{{ 's' if age != 1 }}</span>
+
+  {% if result.overall_status == "up-to-date" %}
+  <span class="ml-auto bg-green-100 text-green-800 border border-green-300 text-sm font-semibold px-3 py-1 rounded-full">
+    ✓ Up to date
+  </span>
+  {% elif result.overall_status == "boosters-only" %}
+  <span class="ml-auto bg-amber-100 text-amber-800 border border-amber-300 text-sm font-semibold px-3 py-1 rounded-full">
+    ~ Boosters needed
+  </span>
+  {% else %}
+  <span class="ml-auto bg-red-100 text-red-800 border border-red-300 text-sm font-semibold px-3 py-1 rounded-full">
+    ✗ Primary doses missing
+  </span>
+  {% endif %}
+</div>
+
+<p class="text-xs text-gray-400 mb-6 italic">
+  Assumption: your child received <em>all</em> doses scheduled in {{ sa.countryName }} up to {{ age }} months.
+  Equivalency is based on matching antigens (the disease targets), regardless of brand or combination product used.
+</p>
+
+<!-- Antigen coverage table -->
+<h2 class="font-semibold text-gray-700 mb-3">Antigen coverage</h2>
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm border border-gray-200 rounded-xl overflow-hidden">
+    <thead class="bg-gray-100 text-xs text-gray-500 uppercase tracking-wide">
+      <tr>
+        <th class="text-left px-4 py-2">Antigen</th>
+        <th class="text-center px-4 py-2">Received in {{ sa.countryName }}</th>
+        <th class="text-center px-4 py-2">Required in {{ sb.countryName }} by {{ age }}m</th>
+        <th class="text-center px-4 py-2">Status</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-100">
+      {% for cov in result.antigen_coverage %}
+      {% if cov.required > 0 %}
+      <tr class="
+        {% if cov.status == 'covered' %}bg-green-50
+        {% elif cov.status == 'partial' %}bg-amber-50
+        {% elif cov.status == 'missing' %}bg-red-50
+        {% else %}bg-white{% endif %}
+      ">
+        <td class="px-4 py-2 font-medium">
+          {% if cov.antigenId in antigens %}
+          {{ antigens[cov.antigenId].name }}
+          <span class="text-xs text-gray-400 font-normal">({{ antigens[cov.antigenId].shortName }})</span>
+          {% else %}
+          {{ cov.antigenId }}
+          {% endif %}
+        </td>
+        <td class="px-4 py-2 text-center text-gray-700">{{ cov.received }}</td>
+        <td class="px-4 py-2 text-center text-gray-700">{{ cov.required }}</td>
+        <td class="px-4 py-2 text-center">
+          {% if cov.status == 'covered' %}
+          <span class="text-green-700 font-semibold">✓ Covered</span>
+          {% elif cov.status == 'partial' %}
+          <span class="text-amber-700 font-semibold">~ Partial ({{ cov.required - cov.received }} more needed)</span>
+          {% elif cov.status == 'missing' %}
+          <span class="text-red-700 font-semibold">✗ Missing ({{ cov.required }} dose{{ 's' if cov.required != 1 }})</span>
+          {% endif %}
+        </td>
+      </tr>
+      {% endif %}
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<!-- Macro to render a missing dose card -->
+{% macro render_missing(dose, color) %}
+<div class="bg-{{ color }}-50 border border-{{ color }}-200 rounded-lg px-4 py-3">
+  <div class="flex flex-wrap items-start justify-between gap-2">
+    <div>
+      <div class="flex flex-wrap gap-1 mb-1">
+        {% for antigen_id in dose.antigens %}
+        {% if antigen_id in antigens %}
+        <span class="text-xs font-mono font-semibold bg-{{ color }}-100 text-{{ color }}-800 rounded px-1.5 py-0.5">
+          {{ antigens[antigen_id].shortName }}
+        </span>
+        {% endif %}
+        {% endfor %}
+        {% if dose.doseType == "booster" %}
+        <span class="text-xs font-semibold bg-{{ color }}-100 text-{{ color }}-700 rounded px-1.5 py-0.5 italic">booster</span>
+        {% endif %}
+      </div>
+      <div class="text-xs text-gray-600">
+        {% for antigen_id in dose.antigens %}
+        {% if antigen_id in antigens %}{{ antigens[antigen_id].name }}{% if not loop.last %} · {% endif %}{% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="text-right text-xs text-gray-500 flex-shrink-0">
+      Normally at {{ dose.ageLabel }} in {{ sb.countryName }} · dose {{ dose.doseNumber }}
+      <br/>
+      {% for product_id in dose.products %}
+      {% if product_id in products %}
+      <span class="inline-block bg-white border border-gray-200 rounded px-1.5 py-0.5 mr-1 mt-1">
+        {{ products[product_id].brandName }}
+      </span>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  {% if dose.notes %}
+  <div class="text-xs text-gray-500 mt-1 italic">{{ dose.notes }}</div>
+  {% endif %}
+</div>
+{% endmacro %}
+
+<!-- Missing primary doses -->
+{% if result.missing_primary %}
+<h2 class="font-semibold text-red-700 mb-1">Primary doses missing</h2>
+<p class="text-xs text-gray-500 mb-3">
+  These are foundational doses your child has not yet received. They should be caught up promptly.
+</p>
+<div class="space-y-2 mb-8">
+  {% for dose in result.missing_primary %}
+  {{ render_missing(dose, "red") }}
+  {% endfor %}
+</div>
+{% endif %}
+
+<!-- Missing boosters -->
+{% if result.missing_boosters %}
+<h2 class="font-semibold text-amber-700 mb-1 {{ 'mt-4' if result.missing_primary }}">Boosters needed</h2>
+<p class="text-xs text-gray-500 mb-3">
+  The primary series is covered, but these boosters are due in {{ sb.countryName }} by {{ age }} months.
+  Immunity from the primary series remains, but boosters should be scheduled.
+</p>
+<div class="space-y-2 mb-8">
+  {% for dose in result.missing_boosters %}
+  {{ render_missing(dose, "amber") }}
+  {% endfor %}
+</div>
+{% endif %}
+
+{% if not result.missing_primary and not result.missing_boosters %}
+<div class="bg-green-50 border border-green-200 rounded-xl px-5 py-4 text-green-800 text-sm mb-8">
+  ✓ No additional doses needed for {{ sb.countryName }}'s schedule up to {{ age }} months.
+  Always confirm with your paediatrician before your first appointment.
+</div>
+{% endif %}
+
+<!-- Covered doses (collapsed by default) -->
+{% if result.covered_doses %}
+<details class="mb-4">
+  <summary class="cursor-pointer text-sm text-gray-500 hover:text-gray-700 mb-2">
+    Show {{ result.covered_doses | length }} already-covered dose(s) ▾
+  </summary>
+  <div class="space-y-2 mt-2">
+    {% for dose in result.covered_doses %}
+    <div class="bg-green-50 border border-green-200 rounded-lg px-4 py-2 flex flex-wrap items-center gap-2 text-xs text-gray-600">
+      {% for antigen_id in dose.antigens %}
+      {% if antigen_id in antigens %}
+      <span class="font-mono font-semibold bg-green-100 text-green-800 rounded px-1.5 py-0.5">
+        {{ antigens[antigen_id].shortName }}
+      </span>
+      {% endif %}
+      {% endfor %}
+      <span>{{ dose.ageLabel }} · dose {{ dose.doseNumber }}</span>
+      <span class="text-green-600 font-semibold ml-auto">✓ covered</span>
+    </div>
+    {% endfor %}
+  </div>
+</details>
+{% endif %}
+
+{% endif %}{# end if result #}
+{% endblock %}

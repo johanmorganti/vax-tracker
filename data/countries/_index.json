@@ -1,0 +1,5 @@
+[
+  {"code": "fr", "name": "France",      "flag": "🇫🇷", "region": "Europe"},
+  {"code": "kr", "name": "South Korea", "flag": "🇰🇷", "region": "Asia"},
+  {"code": "sg", "name": "Singapore",   "flag": "🇸🇬", "region": "Asia"}
+]

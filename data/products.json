@@ -1,0 +1,163 @@
+{
+  "products": [
+    {
+      "id": "bcg-vaccine",
+      "brandName": "BCG Vaccine",
+      "manufacturer": "Various",
+      "antigens": ["bcg"]
+    },
+    {
+      "id": "engerix-b",
+      "brandName": "Engerix-B",
+      "manufacturer": "GSK",
+      "antigens": ["hepb"]
+    },
+    {
+      "id": "infanrix-hexa",
+      "brandName": "Infanrix Hexa",
+      "manufacturer": "GSK",
+      "antigens": ["dtx", "ttx", "ptx", "ipv", "hib", "hepb"],
+      "notes": "Hexavalent combination — used in France and parts of Europe"
+    },
+    {
+      "id": "hexyon",
+      "brandName": "Hexyon",
+      "manufacturer": "Sanofi",
+      "antigens": ["dtx", "ttx", "ptx", "ipv", "hib", "hepb"],
+      "notes": "Alternative hexavalent to Infanrix Hexa, used in France"
+    },
+    {
+      "id": "pediacel",
+      "brandName": "Pediacel",
+      "manufacturer": "Sanofi",
+      "antigens": ["dtx", "ttx", "ptx", "ipv", "hib"],
+      "notes": "Pentavalent — DTaP-IPV-Hib, used in Singapore and UK"
+    },
+    {
+      "id": "pentaxim",
+      "brandName": "Pentaxim",
+      "manufacturer": "Sanofi",
+      "antigens": ["dtx", "ttx", "ptx", "ipv", "hib"],
+      "notes": "Pentavalent — DTaP-IPV-Hib, widely used in Asia"
+    },
+    {
+      "id": "prevenar-13",
+      "brandName": "Prevenar 13",
+      "manufacturer": "Pfizer",
+      "antigens": ["pcv"]
+    },
+    {
+      "id": "bexsero",
+      "brandName": "Bexsero",
+      "manufacturer": "GSK",
+      "antigens": ["men_b"],
+      "notes": "Meningococcal B vaccine"
+    },
+    {
+      "id": "nimenrix",
+      "brandName": "Nimenrix",
+      "manufacturer": "Pfizer",
+      "antigens": ["men_c"],
+      "notes": "Meningococcal C (and ACWY) conjugate vaccine"
+    },
+    {
+      "id": "neisvac-c",
+      "brandName": "NeisVac-C",
+      "manufacturer": "Baxter/Pfizer",
+      "antigens": ["men_c"]
+    },
+    {
+      "id": "priorix",
+      "brandName": "Priorix",
+      "manufacturer": "GSK",
+      "antigens": ["mmr_m", "mmr_mu", "mmr_r"]
+    },
+    {
+      "id": "mmr-ii",
+      "brandName": "MMR II",
+      "manufacturer": "MSD/Merck",
+      "antigens": ["mmr_m", "mmr_mu", "mmr_r"]
+    },
+    {
+      "id": "varilrix",
+      "brandName": "Varilrix",
+      "manufacturer": "GSK",
+      "antigens": ["vzv"]
+    },
+    {
+      "id": "varivax",
+      "brandName": "Varivax",
+      "manufacturer": "MSD/Merck",
+      "antigens": ["vzv"]
+    },
+    {
+      "id": "rotarix",
+      "brandName": "Rotarix",
+      "manufacturer": "GSK",
+      "antigens": ["rotavirus"],
+      "notes": "2-dose oral rotavirus vaccine"
+    },
+    {
+      "id": "rotateq",
+      "brandName": "RotaTeq",
+      "manufacturer": "MSD/Merck",
+      "antigens": ["rotavirus"],
+      "notes": "3-dose oral rotavirus vaccine"
+    },
+    {
+      "id": "boostrix-tetra",
+      "brandName": "Boostrix Tetra",
+      "manufacturer": "GSK",
+      "antigens": ["dtx", "ttx", "ptx", "ipv"],
+      "notes": "Reduced-antigen Tdap-IPV booster"
+    },
+    {
+      "id": "repevax",
+      "brandName": "Repevax",
+      "manufacturer": "Sanofi",
+      "antigens": ["dtx", "ttx", "ptx", "ipv"],
+      "notes": "Reduced-antigen Tdap-IPV booster, alternative to Boostrix Tetra"
+    },
+    {
+      "id": "havrix-junior",
+      "brandName": "Havrix Junior",
+      "manufacturer": "GSK",
+      "antigens": ["hepa"],
+      "notes": "Paediatric Hepatitis A vaccine"
+    },
+    {
+      "id": "encevac",
+      "brandName": "Encevac",
+      "manufacturer": "Biken / Korea CDC",
+      "antigens": ["jev"],
+      "notes": "Inactivated Japanese Encephalitis vaccine, used in Korea"
+    },
+    {
+      "id": "imojev",
+      "brandName": "Imojev",
+      "manufacturer": "Sanofi",
+      "antigens": ["jev"],
+      "notes": "Live attenuated Japanese Encephalitis vaccine"
+    },
+    {
+      "id": "gardasil-9",
+      "brandName": "Gardasil 9",
+      "manufacturer": "MSD/Merck",
+      "antigens": ["hpv"]
+    },
+    {
+      "id": "infanrix",
+      "brandName": "Infanrix",
+      "manufacturer": "GSK",
+      "antigens": ["dtx", "ttx", "ptx"],
+      "notes": "DTaP only (no IPV/Hib), used as standalone in some Korean private clinics"
+    },
+    {
+      "id": "ipol",
+      "brandName": "IPOL",
+      "manufacturer": "Sanofi",
+      "antigens": ["ipv"],
+      "notes": "Standalone inactivated polio vaccine"
+    }
+  ]
+}

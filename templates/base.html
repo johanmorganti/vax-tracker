@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}VaxTracker{% endblock %}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            mandatory: { bg: '#EFF6FF', text: '#1D4ED8', border: '#BFDBFE' },
+            recommended: { bg: '#F0FDF4', text: '#15803D', border: '#BBF7D0' },
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+
+  <nav class="bg-white border-b border-gray-200 px-4 py-3">
+    <div class="max-w-5xl mx-auto flex items-center justify-between">
+      <a href="/" class="text-lg font-semibold text-indigo-700 tracking-tight">💉 VaxTracker</a>
+      <div class="flex gap-6 text-sm font-medium text-gray-600">
+        <a href="/" class="hover:text-indigo-600">Countries</a>
+        <a href="/compare" class="hover:text-indigo-600">Compare / Relocate</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-1 max-w-5xl mx-auto w-full px-4 py-8">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="border-t border-gray-200 bg-white mt-8 px-4 py-4">
+    <div class="max-w-5xl mx-auto text-xs text-gray-400 text-center">
+      ⚠️ <strong>Not medical advice.</strong> Vaccine schedules change — always verify with your doctor or local health authority before making decisions.
+      Data sourced from official national immunisation programmes. Last reviewed dates are shown on each country's schedule.
+    </div>
+  </footer>
+
+</body>
+</html>
