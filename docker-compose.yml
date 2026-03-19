@@ -2,7 +2,7 @@ services:
   web:
     build: .
     ports:
-      - "5001:5001"
+      - "5002:5002"
     restart: unless-stopped
     volumes:
       # Mount data directory so you can update country JSON files
