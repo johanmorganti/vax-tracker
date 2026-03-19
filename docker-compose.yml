@@ -8,3 +8,12 @@ services:
       # Mount data directory so you can update country JSON files
       # without rebuilding the image
       - ./data:/app/data:ro
+    environment:
+      DD_SERVICE: vax-tracker
+      DD_ENV: prod
+      DD_AGENT_HOST: host.docker.internal
+      DD_LOGS_INJECTION: "true"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    labels:
+      com.datadoghq.ad.logs: '[{"source": "python", "service": "vax-tracker"}]'

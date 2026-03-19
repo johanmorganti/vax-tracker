@@ -4,6 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{% block title %}VaxTracker{% endblock %}</title>
+  <script>
+    (function(h,o,u,n,d) {
+      h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}};
+      d=o.createElement(u);d.async=1;d.src=n;
+      n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n);
+    })(window,document,'script','https://www.datadoghq-browser-agent.com/us1/v6/datadog-rum.js','DD_RUM');
+    window.DD_RUM.onReady(function() {
+      window.DD_RUM.init({
+        applicationId: 'ab757dba-d8e9-4626-bd3f-22cb75eadc3f',
+        clientToken: 'pubb9147f1744516b47d7e2d8cdad28616d',
+        site: 'datadoghq.com',
+        service: 'vax-tracker',
+        env: 'prod',
+        sessionSampleRate: 100,
+        sessionReplaySampleRate: 100,
+        trackBfcacheViews: true,
+        defaultPrivacyLevel: 'allow',
+      });
+    });
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {

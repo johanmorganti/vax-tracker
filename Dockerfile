@@ -14,4 +14,4 @@ COPY static/ static/
 
 EXPOSE 5002
 
-CMD ["gunicorn", "--bind", "0.0.0.0:5002", "--workers", "2", "app:create_app()"]
+CMD ["ddtrace-run", "gunicorn", "--bind", "0.0.0.0:5002", "--workers", "2", "app:create_app()"]
