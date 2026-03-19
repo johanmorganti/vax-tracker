@@ -1,0 +1,10 @@
+services:
+  web:
+    build: .
+    ports:
+      - "5001:5001"
+    restart: unless-stopped
+    volumes:
+      # Mount data directory so you can update country JSON files
+      # without rebuilding the image
+      - ./data:/app/data:ro
