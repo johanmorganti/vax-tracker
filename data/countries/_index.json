@@ -1,5 +1,6 @@
 [
   {"code": "fr", "name": "France",      "flag": "🇫🇷", "region": "Europe"},
+  {"code": "hk", "name": "Hong Kong",   "flag": "🇭🇰", "region": "Asia"},
   {"code": "kr", "name": "South Korea", "flag": "🇰🇷", "region": "Asia"},
   {"code": "sg", "name": "Singapore",   "flag": "🇸🇬", "region": "Asia"}
 ]

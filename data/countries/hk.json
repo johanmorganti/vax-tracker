@@ -1,0 +1,155 @@
+{
+  "countryCode": "hk",
+  "countryName": "Hong Kong",
+  "flag": "🇭🇰",
+  "programName": "Hong Kong Childhood Immunisation Programme (HKCIP)",
+  "lastReviewed": "2024-01",
+  "sourceUrl": "https://www.chp.gov.hk/en/features/100155.html",
+  "notes": "The HKCIP is managed by the Department of Health. All listed vaccines are provided free of charge at Maternal and Child Health Centres. Hexavalent Infanrix Hexa replaced separate DTP/IPV/Hib/HepB injections from 2016. HPV vaccination (Gardasil 9) was extended to both boys and girls in Secondary 1 (~age 12–13) from 2023.",
+  "doses": [
+    {
+      "id": "hk-bcg",
+      "ageMonths": 0, "ageLabel": "Birth",
+      "products": ["bcg-vaccine"],
+      "antigens": ["bcg"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "hk-bcg", "status": "mandatory", "notes": "Given within 24 hours of birth"
+    },
+    {
+      "id": "hk-hepb-1",
+      "ageMonths": 0, "ageLabel": "Birth",
+      "products": ["engerix-b"],
+      "antigens": ["hepb"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "hk-hepb", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "hk-hepb-2",
+      "ageMonths": 1, "ageLabel": "1 month",
+      "products": ["engerix-b"],
+      "antigens": ["hepb"],
+      "doseNumber": 2, "doseType": "primary",
+      "seriesId": "hk-hepb", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "hk-hexa-1",
+      "ageMonths": 2, "ageLabel": "2 months",
+      "products": ["infanrix-hexa"],
+      "antigens": ["dtx", "ttx", "ptx", "ipv", "hib", "hepb"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "hk-hexa", "status": "mandatory", "notes": "Hexavalent (DTaP-IPV-Hib-HepB)"
+    },
+    {
+      "id": "hk-pcv-1",
+      "ageMonths": 2, "ageLabel": "2 months",
+      "products": ["prevenar-13"],
+      "antigens": ["pcv"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "hk-pcv", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "hk-hexa-2",
+      "ageMonths": 4, "ageLabel": "4 months",
+      "products": ["infanrix-hexa"],
+      "antigens": ["dtx", "ttx", "ptx", "ipv", "hib", "hepb"],
+      "doseNumber": 2, "doseType": "primary",
+      "seriesId": "hk-hexa", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "hk-pcv-2",
+      "ageMonths": 4, "ageLabel": "4 months",
+      "products": ["prevenar-13"],
+      "antigens": ["pcv"],
+      "doseNumber": 2, "doseType": "primary",
+      "seriesId": "hk-pcv", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "hk-hexa-3",
+      "ageMonths": 6, "ageLabel": "6 months",
+      "products": ["infanrix-hexa"],
+      "antigens": ["dtx", "ttx", "ptx", "ipv", "hib", "hepb"],
+      "doseNumber": 3, "doseType": "primary",
+      "seriesId": "hk-hexa", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "hk-mmr-1",
+      "ageMonths": 12, "ageLabel": "12 months",
+      "products": ["priorix", "mmr-ii"],
+      "antigens": ["mmr_m", "mmr_mu", "mmr_r"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "hk-mmr", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "hk-vzv-1",
+      "ageMonths": 12, "ageLabel": "12 months",
+      "products": ["varilrix", "varivax"],
+      "antigens": ["vzv"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "hk-vzv", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "hk-pcv-booster",
+      "ageMonths": 12, "ageLabel": "12 months",
+      "products": ["prevenar-13"],
+      "antigens": ["pcv"],
+      "doseNumber": 3, "doseType": "booster",
+      "seriesId": "hk-pcv", "status": "mandatory", "notes": "Booster dose"
+    },
+    {
+      "id": "hk-hexa-booster",
+      "ageMonths": 18, "ageLabel": "18 months",
+      "products": ["infanrix-hexa"],
+      "antigens": ["dtx", "ttx", "ptx", "ipv", "hib", "hepb"],
+      "doseNumber": 4, "doseType": "booster",
+      "seriesId": "hk-hexa", "status": "mandatory", "notes": "18-month booster"
+    },
+    {
+      "id": "hk-mmr-2",
+      "ageMonths": 18, "ageLabel": "18 months",
+      "products": ["priorix", "mmr-ii"],
+      "antigens": ["mmr_m", "mmr_mu", "mmr_r"],
+      "doseNumber": 2, "doseType": "booster",
+      "seriesId": "hk-mmr", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "hk-dtap-ipv-booster",
+      "ageMonths": 72, "ageLabel": "Primary 1 (~6 years)",
+      "products": ["boostrix-tetra", "repevax"],
+      "antigens": ["dtx", "ttx", "ptx", "ipv"],
+      "doseNumber": 5, "doseType": "booster",
+      "seriesId": "hk-hexa", "status": "mandatory", "notes": "School-based booster (Primary 1)"
+    },
+    {
+      "id": "hk-vzv-2",
+      "ageMonths": 72, "ageLabel": "Primary 1 (~6 years)",
+      "products": ["varilrix", "varivax"],
+      "antigens": ["vzv"],
+      "doseNumber": 2, "doseType": "booster",
+      "seriesId": "hk-vzv", "status": "mandatory", "notes": null
+    },
+    {
+      "id": "hk-dtap-ipv-s1",
+      "ageMonths": 144, "ageLabel": "Secondary 1 (~12 years)",
+      "products": ["boostrix-tetra", "repevax"],
+      "antigens": ["dtx", "ttx", "ptx", "ipv"],
+      "doseNumber": 6, "doseType": "booster",
+      "seriesId": "hk-hexa", "status": "mandatory", "notes": "School-based booster (Secondary 1)"
+    },
+    {
+      "id": "hk-hpv-1",
+      "ageMonths": 144, "ageLabel": "Secondary 1 (~12 years)",
+      "products": ["gardasil-9"],
+      "antigens": ["hpv"],
+      "doseNumber": 1, "doseType": "primary",
+      "seriesId": "hk-hpv", "status": "mandatory", "notes": "School-based HPV programme, boys and girls (extended to boys in 2023)"
+    },
+    {
+      "id": "hk-hpv-2",
+      "ageMonths": 150, "ageLabel": "Secondary 1–2 (~12–13 years)",
+      "products": ["gardasil-9"],
+      "antigens": ["hpv"],
+      "doseNumber": 2, "doseType": "primary",
+      "seriesId": "hk-hpv", "status": "mandatory", "notes": "6 months after dose 1"
+    }
+  ]
+}
